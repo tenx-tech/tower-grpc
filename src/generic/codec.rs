@@ -12,11 +12,6 @@ use error::ProtocolError;
 
 /// Encodes and decodes gRPC message types
 pub trait Codec {
-    /// The content-type header for messages using this encoding.
-    ///
-    /// Should be `application/grpc+yourencoding`.
-    const CONTENT_TYPE: &'static str;
-
     /// The encode type
     type Encode;
 
