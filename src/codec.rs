@@ -46,9 +46,6 @@ impl<T, U> ::generic::Codec for Codec<T, U>
 where T: Message,
       U: Message + Default,
 {
-    /// Protocol buffer gRPC content type
-    const CONTENT_TYPE: &'static str = "application/grpc+proto";
-
     type Encode = T;
     type Encoder = Encoder<T>;
     type Decode = U;
